@@ -1,0 +1,10 @@
+services:
+  narrateur-lg:
+    build: .
+    image: narrateur-lg:latest
+    container_name: narrateur-lg
+    restart: unless-stopped
+    ports:
+      - "8088:80"
+    volumes:
+      - /mnt/user/appdata/narrateur-lg/cards:/usr/share/nginx/html/cards
